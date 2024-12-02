@@ -11,6 +11,7 @@ DATABASE_URL = (
     f"{os.getenv('POSTGRES_HOST')}:{os.getenv('POSTGRES_PORT')}/"
     f"{os.getenv('POSTGRES_DATABASE')}"
 )
+
 engine = create_async_engine(DATABASE_URL, echo=True)
 
 Base = declarative_base()

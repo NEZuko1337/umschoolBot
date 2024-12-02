@@ -1,5 +1,7 @@
 aiogram
 sqlalchemy~=2.0.36
 alembic
-psycopg2-binary
+psycopg2
 python-dotenv~=1.0.1
+asyncpg
+greenlet
