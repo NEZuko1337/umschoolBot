@@ -30,7 +30,7 @@ async def finish_registration(message: Message, state: FSMContext):
     async with Transaction():
         exists_student = await Student.get_student(student_id=user_id)
         if exists_student:
-            await message.answer("Вы уже зарегистрированы, бегите заносить свои баллы или смотреть их!")
+            await message.answer("Вы уже зарегистрированы с этого телеграмма, бегите заносить свои баллы или смотреть их!")
             await state.clear()
             return
         new_student = Student(
