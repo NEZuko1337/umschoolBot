@@ -7,7 +7,7 @@ from app.db.connection import db_session
 
 class Student(Base):
     __tablename__ = 'students'
-    id = Column(Integer, nullable=False)
+    id = Column(Integer, primary_key=True, nullable=False)
     first_name = Column(String, nullable=False)
     last_name = Column(String, nullable=False)
     scores = relationship("Score", back_populates="student")
